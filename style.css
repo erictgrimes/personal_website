@@ -1,0 +1,24 @@
+html {
+  background-color: #183a37;
+}
+
+h1 {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#portrait {
+  height: 300px;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
