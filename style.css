@@ -10,3 +10,15 @@ a {
   color: white;
   text-decoration: none;
 }
+
+#portrait {
+  height: 300px;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
