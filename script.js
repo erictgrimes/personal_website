@@ -13,15 +13,15 @@ hamburg.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 550px)").matches) {
-    clsoeMenu();
+    closeMenu();
   }
 });
 
 if (window.matchMedia("(max-width: 550px)").matches) {
-  clsoeMenu();
+  closeMenu();
 }
 
-function clsoeMenu() {
+function closeMenu() {
   links.forEach((link) => {
     links.addEventListener("click", () => {
       linksContainer.classList.remove("active");
@@ -41,4 +41,15 @@ form.addEventListener("submit", (e) => {
   submitButton.disabled = true;
   e.preventDefault();
   window.location.href = window.location.origin + "/success.html";
+});
+
+// submit button did not work with when window was resized this fizxed that
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(max-width: 550px)").matches) {
+    form.addEventListener("submit", (e) => {
+      submitButton.disabled = true;
+      e.preventDefault();
+      window.location.href = window.location.origin + "/success.html";
+    });
+  }
 });
