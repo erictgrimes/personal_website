@@ -44,12 +44,18 @@ form.addEventListener("submit", (e) => {
 });
 
 // submit button did not work with when window was resized this fizxed that
-window.addEventListener("resize", () => {
-  if (window.matchMedia("(max-width: 550px)").matches) {
-    form.addEventListener("submit", (e) => {
-      submitButton.disabled = true;
-      e.preventDefault();
-      window.location.href = window.location.origin + "/success.html";
-    });
-  }
-});
+if (window.matchMedia("(max-width: 550px)").matches) {
+  form.addEventListener("submit", (e) => {
+    submitButton.disabled = true;
+    e.preventDefault();
+    window.location.href = window.location.origin + "/success.html";
+  });
+}
+
+if (window.matchMedia("(min-width: 550px)").matches) {
+  form.addEventListener("submit", (e) => {
+    submitButton.disabled = true;
+    e.preventDefault();
+    window.location.href = window.location.origin + "/success.html";
+  });
+}
